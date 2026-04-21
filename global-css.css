@@ -71,7 +71,7 @@
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0,0,0,2.8);
   position: fixed;
-  right: 40px;
+  right: 100px;
   bottom: 100px;
 }
 
@@ -273,7 +273,7 @@ code {
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0,0,0,2.8);
   position: fixed;
-  right: 40px;
+  right: 100px;
   bottom: 80px;
 }
 
