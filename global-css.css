@@ -1,8 +1,8 @@
 /* Floating Container */
 .floating-container {
   position: fixed;
-  right: 5px;
-  bottom: 50px;
+  right: 15px;
+  bottom: 150px;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -397,8 +397,8 @@ li {
 
 .floating-container {
   position: fixed;
-  right: 120px;
-  bottom: 200px;
+  right: 100px;
+  bottom: 150px;
   z-index: 1000;
 }
 
@@ -409,7 +409,7 @@ li {
 }
 
 .floating-menu {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: none;
   flex-direction: column;
   background: rgba(30, 30, 30, 0.7);
