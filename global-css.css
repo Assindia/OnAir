@@ -385,6 +385,12 @@ ul {
 }
 
 
+a:any-link {
+    font: bold 1.4em/110% sans-serif;
+    color: #003399; 
+    padding-top: 5px;
+}
+
 li {
 	font-size: 11px;
 }
