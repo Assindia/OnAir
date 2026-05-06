@@ -71,7 +71,7 @@
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0,0,0,2.8);
   position: fixed;
-  right: 100px;
+  right: 50px;
   bottom: 100px;
 }
 
@@ -101,7 +101,7 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns:  25px 1fr 140px ;
+  grid-template-columns:  10px 1fr 60px ;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -273,7 +273,7 @@ code {
   cursor: pointer;
   box-shadow: 0 5px 5px rgba(0,0,0,2.8);
   position: fixed;
-  right: 100px;
+  right: 50px;
   bottom: 80px;
 }
 
