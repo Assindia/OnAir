@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Treffpunkt Steele</title>
+
+<style>
+body {
+    font-size: ;
+    font-family: Verdana;
+    color: rgb(0,0,0,0.9);
+    padding: 15;
+    margin: ;
+    background-color: rgb(120,0,0,0.2);
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    color: blue;
+}
+
+.box {
+    font: ;
+    font-weight: ;
+    background-color: rgb(15,105,20,0.1);
+    border: 2px solid #333; 
+    border-radius:15px;
+    padding:10px;
+    margin: 25px;
+}
+
+.box2 {
+    font: ;
+    font-weight: ;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(60px);
+    border: 5px solid #003399; 
+    border-radius:8px;
+    padding:5px;
+    margin: 10px;
+}
+
+.glass{
+    background:rgba(255,255,255,0.4);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+
+.tag {
+    font: .9em/100% , serif;
+    font-weight: 800;
+    color: rgb(0,0,200,0.6);
+    background: ; 
+    border: 0px solid rgb(0,0,100,0.3); 
+    padding:10px;
+    margin: 0px;
+}
+
+.wann {
+    font: .8em/120%, serif;
+    font-weight: 900;
+    background:; 
+    border: ; 
+    padding: 2px 2px 2px 2px;
+    margin-too: 0px;
+}
+
+
+.was {
+    font: 1.8em/100%, serif;
+    font-weight: 600;
+    background:; 
+    border: ; 
+    padding:1px;
+    margin: 0px;
+}
+
+
+
+a:any-link {
+    font: 1.5em/1.0 serif;
+    font-weight: 700;
+    color:rgb(0,0,155,0.7);
+    text-decoration: none;
+}
+
+ul {list-style-type: none;
+}
+
+
+.hinweis {
+    font: 2em serif;
+    font-weight: 900;
+    color:rgb(120,0,0,1.0);
+    text-align: center;
+    text-decoration: none;
+    width: ;
+    background:rgba(5,25,255,0.1);
+    backdrop-filter:blur(25px);
+    border: 4px solid rgb(0,0,100,0.3);
+    border-radius:10px;
+    padding:0px;
+    margin: 0px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div class="box" id="Hinweis">
+<div class="hinweis" id="hinweis">
+🎯 Hinweis 🎯</div>
+<div class="tag"><a href="#L" onclick="-speakWaldpark()">Samstag 12.6.2025</a></div>
+
+<div class="box2 glass">
+<div class="wann">10:00 - 14:00</div>
+<div class="was">Ausflug zum Waldpark am Stadtwaldplatz&nbsp;</div>
+<div class="was">Wir treffen uns um 10 Uhr beim Treffpunkt Steele&nbsp;</div>
+</div>
+</div>
+
+<a href="#L" onclick="speakWp()">Wochenplan 🔊</a></h1>
+
+
+
+
+<div class="box" id="Montag">
+<div class="tag"><a href="#L" onclick="speakMo()">Montag</a></div>
+
+<div class="box2 glass">
+<div class="wann">11:00 - 13:00</div>
+<div class="was">Ukraine-Tag&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">13:30 - 15:00 </div>
+<div class="was">Deutschkurs A2&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">15:30 - 17:30 </div>
+<div class="was">Handarbeite - 2. Und 4. Montag im Monat&nbsp;</div>
+</div>
+</div>
+
+
+
+<div class="box">
+<div class="tag"><a href="#L" onclick="speakDi()">Dienstag</a></div>
+<div class="box2 glass">
+<div class="wann">11:00 - 14:00 </div>
+<div class="was">Sprechstunde <br>Terminvergabe um 11:00 Uhr</div>
+</div>
+<div class="box2 glass">
+<div class="wann">15:00 - 16:30 </div>
+<div class="was">Deutschkurs B2&nbsp;&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">16:45 - 17:45 </div>
+<div class="was">Lernhilfe f&uuml;r Kinder (Klasse 1&ndash;6)<br> nur mit Anmeldung unter 01772738622&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">18:00 - 20:00 </div>
+<div class="was">Rund ums Buch <br>Jeden zweiten Dienstag im Monat&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">19:00 - 20:30 </div>
+<div class="was">Deutschkurs B2 Online</div>
+</div>
+</div>
+
+
+
+
+<div class="box" id="Mittwoch">
+<div class="tag"><a href="#L" onclick="speakMi()">Mittwoch</a></div>
+<div class="box2 glass">
+<div class="wann">09:00 - 11:00</div>
+<div class="was">Offener Treff <br>f&uuml;r Eltern mit Kleinkindern&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">11:00 - 12:00</div>
+<div class="was">Energiesparberatung <br>Neue Arbeit Diakoniewerk&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">11:00 - 16:00</div>
+<div class="was">Offene Begegnung</div>
+</div>
+<div class="box2 glass">
+<div class="wann">16:00 - 18:00</div>
+<div class="was">Erz&auml;hlcaf&eacute; <br>Aushang beachten&nbsp;</div>
+</div>
+</div>
+
+
+
+
+<div class="box" id="Donnerstag">
+<div class="tag"><a href="#L" onclick="speakDo()">Donnerstag</a></div>
+<div class="box2 glass">
+<div class="wann">10:00 - 11:30</div>
+<div class="was">Deutschkurs A1&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">12:00 - 13:30</div>
+<div class="was">Deutschkurs A2&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">15:30 - 17:30</div>
+<div class="was">Therapeutisches Malen <br>Russisch / Ukrainisch&nbsp;</div>
+</div>
+<div class="box2 glass">
+<div class="wann">18:00 - 19:30</div>
+<div class="was">Club der Bastels&uuml;chtigen - Ein Kreativangebot&nbsp;</div>
+</div>
+</div>
+
+
+
+<div class="box" id="Freitag">
+<div class="tag"><a href="#L" onclick="speakFr()">Freitag</a></div>
+<div class="box2 glass">
+<div class="wann">09:30 - 13:00</div>
+<div class="was">Frauentag&nbsp;&nbsp;</div>
+</div></div>
+
+
+
+<div class="box" id="Samstag">
+<div class="tag"><a href="#L" onclick="speakSa()">Samstag</a></div>
+<div class="box2 glass">
+<div class="wann">11:00 - 13:00</div>
+<div class="was">Offenes Caf&eacute;<br>Jeden zweiten und vierten Samstag im Monat&nbsp;</div>
+</div>
+</div>
+
+
+
+<div class="box" id="Sonntag">
+<div class="tag"><a href="#L" onclick="speakSo()">Sonntag</a></div>
+<div class="box2 glass">
+<div class="wann">15:00 - 18:00</div>
+<div class="was">Repaircaf&eacute; <br>jeden ersten Sonntag im Monat</div>
+</div></div>
+
+
+
+
+<div class="box">
+<div class="tag"><a href="#L" onclick="speakKD()">Kontakt</a></div>
+<div class="box2 glass">
+
+<div class="wann">Adresse:&nbsp;</div>
+
+<p>Treffpunkt Steele</p>
+
+<p>Bochumer Stra&szlig;e 37</p>
+
+<p>45276 Essen-Steele&nbsp;</p>
+
+</div>
+
+</div>
+
+
+<p>Stand Mai 2026&nbsp;</p>
+
+
+
+
+
+<script>
+
+
+let wpMo1 = 
+"11:00 - 13:00, Ukraine-Tag , ";
+
+let wpMo2 = 
+"13:30 - 15:00, Deutschkurs, A2 , ";
+
+let wpMo3 = 
+"jeden zweiten und vierten Montag im Monat 15:30 - 17:30  Handarbeiten,";
+                     
+let wpMo = 
+"Montag, " + wpMo1 + wpMo2 + wpMo3;
+                    
+                    
+let wpDi1 =
+"11:00 - 14:00  Sprechstunde, Terminvergabe um 11:00 Uhr, ";
+
+let wpDi1b =
+"15:00 - 16:30  B2 Deutschkurs, ";
+
+
+let wpDi2 =
+"16:45 - 17:45  Lernhilfe für Kinder (erste bis sechste Klasse) nur mit Anmeldung Telefon  0 1 7 7 2,    7 3 8 ,  6 2 2,"; 
+
+let wpDi4 =
+"Jeden zweiten Dienstag im Monat 18:00 - 20:00  Rund ums Buch, ";
+
+let wpDi5 =
+"19:00 - 20:30  Online B2 Deutschkurs, ";
+
+let wpDi = 
+"Dienstag, " + wpDi1 + wpDi1b + wpDi2 + wpDi4 + wpDi5;
+
+
+
+let wpMi1 = 
+"09:00 - 11:00  Offener Treff, für Eltern mit Kleinkindern ";
+
+let wpMi2 = 
+"11:00 - 16:00  Offene Begegnung";
+
+let wpMi3 = 
+"16:00 - 18:00  Erzählcafé, Aushang beachten ";
+
+let wpMi = 
+"Mittwoch, " + wpMi1 + wpMi2 + wpMi3;
+
+
+
+let wpDo1 = 
+"10:00 - 11:30  Deutschkurs, A1 ";
+
+let wpDo2 = 
+"12:00 - 13:30  Deutschkurs, A2 ";
+
+let wpDo3 = 
+"15:30 - 17:30  Therapeutisches Malen,  Russisch / Ukrainisch ";
+
+let wpDo4 = 
+"18:00 - 19:30  Club der Bastelsüchtigen,  Ein Kreativangebot ";
+
+let wpDo = 
+"Donnerstag, " + wpDo1 + wpDo2 + wpDo3 + wpDo4;
+
+
+
+let wpFr1 = 
+"09:30 - 13:00 ,Frauentag  ";
+
+let wpFr = 
+"Freitag, " + wpFr1;
+
+
+
+let wpSa1 = 
+"11:00 - 13:00 Jeden zweiten und vierten Samstag im Monat  Offenes Café ";
+
+let wpSa = 
+"Samstag, " + wpSa1;
+
+
+
+let wpSo1 = 
+"15:00 - 18:00 jeden ersten Sonntag im Monat Repair Café ";
+
+let wpSo = 
+"Sonntag, " + wpSo1;
+
+
+let KD =
+"Kontaktdaten,  Adresse  Treffpunkt Steele   Bochumer Straße Nr.37  Postleitzahl 45276 Essen-Steele ";
+
+
+
+
+let Waldpark =
+"Am Samstag 12.6.2025 treffen wir uns beim Treffpunkt Steele um 10 Uhr und machen einen Ausflug zum Waldpark am Stadtwaldplatz. Der Ausflug wird bis etwa 14 Uhr dauern. Jeder bringt etwas für ein kleines Picknick mit.";
+
+
+
+
+
+
+function speakWaldpark() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Aus der Gruppe wurde der Wunsch nach einem Ausflug geäußert. " 
+            + Waldpark)
+             );
+    }
+}
+
+
+function speakWp() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele.   ." 
+            + wpMo + wpDi + wpMi + wpDo + wpFr + wpSa + wpSo)
+             );
+    }
+}
+
+function speakMo() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpMo)
+             );
+    }
+}
+
+
+function speakDi() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpDi)
+             );
+    }
+}
+
+function speakMi() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpMi)
+             );
+    }
+}
+
+
+
+function speakDo() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpDo)
+             );
+    }
+}
+
+
+
+
+function speakFr() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpFr)
+             );
+    }
+}
+
+
+
+function speakSa() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpSa)
+             );
+    }
+}
+
+
+
+function speakSo() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + wpSo)
+             );
+    }
+}
+
+
+
+function speakKD() {
+    if ('speechSynthesis' in window) {
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+            "Treffpunkt Steele, " 
+            + KD)
+             );
+    }
+}
+
+
+</script>
+
+
+
+</body>
+</html>
