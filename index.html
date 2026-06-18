@@ -19,6 +19,26 @@
     <hr>
 <!--<p><a href="url"></a></p><p>...</p> // -->
 
+
+
+<h2>Input >>> Sprachausgabe</h2>
+
+<div class="fFeld">
+Text eingeben oder einfügen
+<textarea class="fEingabe"
+          id="text"
+          autofocus 
+          rows="5"
+          cols="25"
+          placeholder="Text eingeben oder einfügen"></textarea>
+
+
+<button class="start" id="start">vorlesen</button>
+</div>
+
+
+
+		
 <!-- Eule sucht den Bea -->
 <p><a href="https://youtube.com/playlist?list=PLxRuIiRd30WltyTuS3wxS6XWppFFGOAt6&" target="_blank">
 <img src="eule.jpg" width="50%"></a><br>Eule findet den Beat</p>
@@ -120,6 +140,32 @@ LoRe</a><br>Kreativwerstatt</p>
 
 
 <script>
+
+
+
+document.getElementById("start").addEventListener("click", speak);
+
+function speak() {
+
+    const g = document.getElementById("text").value;
+
+    if ('speechSynthesis' in window) {
+        speechSynthesis.cancel();
+        speechSynthesis.speak(
+            new SpeechSynthesisUtterance(
+                "" + g
+            )
+        );
+
+    } else {
+        alert("Sprachausgabe wird nicht unterstützt.");
+    }
+
+	}
+
+
+	
+	
 let menuOpen = false;
 let subOpen = true;
 
