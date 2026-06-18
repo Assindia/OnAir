@@ -16,13 +16,13 @@ margin: 30px;
 }
 
 .fFeld {
-font: .8em Verdana serif;
+font: 1.2em Verdana serif;
 font-weight: 700;
 color:rgb(255,255,255,1.0);
 text-align: ;
 text-decoration: none;
-width: ;
-height: 250px;
+width: 95% ;
+height: 450px;
 background: rgba(5,25,255,1.0); 
 border: 2px solid blue; 
 padding: 3px;
