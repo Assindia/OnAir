@@ -2,11 +2,79 @@
 <html lang="de">
 <head>
 <title>OnAir</title>
-<meta http-equiv="refresh" content="120000">
+<meta http-equiv="refresh" content="1200000">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="global-css.css" type="text/css">
+<style>
+body { 
+font-family: sans-serif; 
+padding: 5px; }
 
+
+.grid-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 70px 1fr 50px 50px;
+  gap: 5px;
+  align-items: center;
+}
+
+
+p {
+font: 1.5em serif;
+font-weight: 900;
+color:rgb(0,0,0,1.0);
+text-align: ;
+text-decoration: none;
+margin: ;
+}
+
+.irgendwas {
+font: 1.5em serif;
+font-weight: 900;
+color:rgb(0,0,0,1.0);
+text-align: ;
+text-decoration: none;
+width: 50px;
+height: 50px;
+background: #ccc; 
+border: 1px solid blue; 
+padding: 5px;
+margin: 2px;
+}
+
+button { 
+cursor: pointer; 
+font: 2.5em serif;
+font-weight: 900;
+color: rgb(0,0,0,1.0);
+text-align: right;
+text-decoration: none;
+width: 50px;
+height: 40px;
+background: rgba(0,0,0,0.0); 
+border: 0px solid blue; 
+padding: 1px;
+margin: 2px;
+}
+
+textarea { 
+font: 1.1em serif;
+font-weight: 500;
+color:rgb(0,0,0,1.0);
+text-align: ;
+text-decoration: none;
+width: 95%;
+height: 120px;
+background:rgba(0,0,150,0.1);
+border: 2px solid blue; 
+padding: 5px;
+margin: ;
+ }
+
+
+</style>
 </head>
 <body>
   <div class="page"> <header> <img alt="logo" src="rRost.jpg" width=""> 
@@ -21,21 +89,42 @@
 
 
 
-<h2>Input >>> Sprachausgabe</h2>
+<h2>Sprachausgabe</h2>
 
-<div class="fFeld">
-<textarea class="fEingabe"
-          id="text"
-          autofocus 
-          rows="5"
-          cols="25"
-          placeholder="Text eingeben oder einfügen"></textarea>
+
+<textarea id="text1">
+
+
+
+Das Beispiel erzeugt ein Objekt 
+Text zu Sprache - TTS
+
+Die Eigenschaften der Sprachausgabe lassen sich beeinflussen. 
+
+Die Rate bestimmt die Geschwindigkeit (Standardwert ist 1).
+
+Pitch legt die Tonhöhe fest (Standardwert ist 1). 
+
+Volume stellt die Lautstärke ein (Standardwert ist 1). 
+
+Bei einem Klick auf den Lautsprecher wird der Text mit speechSynthesis - synth.speak(utterance)  vorgelesen.
+
+Beachte: 
+Die maximale Länge des Textes, der in jeder Äußerung gesprochen werden kann, beträgt 32.767 Zeichen.
+Das Märchen Hänsel und Gretel müsste man auf zwei Äußerungen verteilen, oder kürzen.
+
+Noch etwas
+Die Zeilen, oben im Textfeld kannst du für eigene Versuche nutzen.
+Gib einfach etwas ein.
+
+
+
+</textarea>
+
 <br>
-
-<button class="start" id="start">vorlesen</button>
-</div>
-
-
+<p>
+<button onclick="speakText()">🔊 </button> 👈 🫆
+</p>
 
 		
 <!-- Eule sucht den Bea -->
@@ -137,31 +226,6 @@ LoRe</a><br>Kreativwerstatt</p>
 
 <script>
 
-
-
-document.getElementById("start").addEventListener("click", speak);
-
-function speak() {
-
-    const g = document.getElementById("text").value;
-
-    if ('speechSynthesis' in window) {
-        speechSynthesis.cancel();
-        speechSynthesis.speak(
-            new SpeechSynthesisUtterance(
-                "" + g
-            )
-        );
-
-    } else {
-        alert("Sprachausgabe wird nicht unterstützt.");
-    }
-
-	}
-
-
-	
-	
 let menuOpen = false;
 let subOpen = true;
 
@@ -185,8 +249,23 @@ window.onload = () => {
     el.style.display = 'block';
   });
 };
-</script>
 
+
+let synth = window.speechSynthesis;
+
+function speakText() {
+  let text = document.getElementById("text1").value;
+  let utterance = new SpeechSynthesisUtterance(text);
+  synth.cancel();
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  utterance.volume = 0.2;
+  synth.speak(utterance);  
+}
+
+</script>
+</body>
+</html>
 </body>
 </html>
 
