@@ -20,8 +20,46 @@
   color: black; 
   }
   h1 { font-size: 5.5em; align: center;}
-  p { font-size: 3.0em; align: center;}
-  </style>
+  p {
+font-size: 3.0em; 
+font-weight: 700;
+color:rgb(0,0,0,1.0);
+align: center;
+}
+
+  
+button { 
+cursor: pointer; 
+font: 2.5em serif;
+font-weight: 900;
+color: rgb(0,0,0,1.0);
+text-align: right;
+text-decoration: none;
+width: 50px;
+height: 40px;
+background: rgba(0,0,0,0.0); 
+border: 0px solid blue; 
+padding: 1px;
+margin: 2px;
+}
+
+textarea { 
+font: 1.1em serif;
+font-weight: 500;
+color:rgb(0,0,0,1.0);
+text-align: ;
+text-decoration: none;
+width: 95%;
+height: 120px;
+background:rgba(0,0,150,0.1);
+border: 2px solid blue; 
+padding: 5px;
+margin: ;
+ }
+
+
+
+</style>
 </head>
 <body>
 <h1>OnAir</h1>
@@ -41,8 +79,56 @@
 <img src="eule.jpg" width="500"></a><br>Eule findet den Beat</p>
   <p>Donnerstag, den 11. Juni um 16.00 Uhr </p>
 
+<h2>Text zu Sprache</h2> 
+<textarea id="text1">
 
 
+
+Das Beispiel erzeugt ein Objekt 
+Text zu Sprache - TTS
+
+Die Eigenschaften der Sprachausgabe lassen sich beeinflussen. 
+
+Die Rate bestimmt die Geschwindigkeit (Standardwert ist 1).
+
+Pitch legt die Tonhöhe fest (Standardwert ist 1). 
+
+Volume stellt die Lautstärke ein (Standardwert ist 1). 
+
+Bei einem Klick auf den Lautsprecher wird der Text mit speechSynthesis - synth.speak(utterance)  vorgelesen.
+
+Beachte: 
+Die maximale Länge des Textes, der in jeder Äußerung gesprochen werden kann, beträgt 32.767 Zeichen.
+Das Märchen Hänsel und Gretel müsste man auf zwei Äußerungen verteilen, oder kürzen.
+
+Noch etwas
+Die Zeilen, oben im Textfeld kannst du für eigene Versuche nutzen.
+Gib einfach etwas ein.
+
+
+
+</textarea>
+
+<br>
+<p>
+<button onclick="speakText()">🔊 </button> 👈 🫆
+</p>
+
+<script>
+let synth = window.speechSynthesis;
+
+function speakText() {
+  let text = document.getElementById("text1").value;
+  let utterance = new SpeechSynthesisUtterance(text);
+  synth.cancel();
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  utterance.volume = 0.2;
+  synth.speak(utterance);  
+}
+
+  </script>
+  
 </body>
 </html>
 
